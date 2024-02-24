@@ -1,7 +1,13 @@
+import AppBar from "@/components/AppBar";
+import ImageBar from "@/components/ImageBar";
+
 export default function Home() {
   return (
-    <main className="prose">
-      <h1>MIMA-LAK Kft</h1>
-    </main>
+    <>
+      <AppBar />
+      <main>
+        <ImageBar />
+      </main>
+    </>
   );
 }
