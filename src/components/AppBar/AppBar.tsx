@@ -1,8 +1,16 @@
+import Link from "next/link";
+import { Button } from "../ui/button";
+
 function AppBar() {
   return (
-    <nav className="bg-secondary p-4 border-b-2 flex items-baseline">
-      <h1 className="flex-1">MIMA-LAK Kft</h1>
-      <h1 className="text-xs">Otthont teremtünk</h1>
+    <nav className="p-4 shadow-md flex items-baseline mb-2 gap-4">
+      <h1 className="flex-1 underline cursor-pointer">
+        <Link href="/">MIMA-LAK Kft</Link>
+      </h1>
+
+      <Link href="/contact">
+        <Button>Kapcsolat</Button>
+      </Link>
     </nav>
   );
 }
