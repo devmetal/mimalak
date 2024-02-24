@@ -8,26 +8,33 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
+import useImagePreload from "@/lib/hooks/useImagePreload";
 
 const images = [
-  "/2022/IMG_0647.jpg",
-  "/2022/IMG_20230104_115801.jpg",
-  "/2022/IMG_20230325_110152.jpg",
-  "/2022/IMG_20230526_152740.jpg",
-  "/2020/IMG_20210331_094823.jpg",
-  "/2022/alaprajz_javitott.jpg",
-  "/2020/IMG_20210331_094833.jpg",
-  "/2020/IMG_20191011_131645.jpg",
-  "/2020/IMG_20200226_122247.jpg",
+  "/2022_webp/IMG_0647.jpg.webp",
+  "/2022_webp/IMG_20230104_115801.jpg.webp",
+  "/2022_webp/IMG_20230325_110152.jpg.webp",
+  "/2022_webp/IMG_20230526_152740.jpg.webp",
+  "/2020_webp/IMG_20210331_094823.jpg.webp",
+  "/2022_webp/alaprajz_javitott.jpg.webp",
+  "/2020_webp/IMG_20210331_094833.jpg.webp",
+  "/2020_webp/IMG_20191011_131645.jpg.webp",
+  "/2020_webp/IMG_20200226_122247.jpg.webp",
 ];
 
 export default function ImageBar() {
   const plugin = useRef(
     AutoPlay({
       delay: 2000,
-      stopOnInteraction: true,
     })
   );
+
+  const [loading] = useImagePreload(images);
+
+  if (loading) {
+    return <h1>Loading....</h1>;
+  }
+
   return (
     <Carousel className="w-full" plugins={[plugin.current]}>
       <CarouselContent>
