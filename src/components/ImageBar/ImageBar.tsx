@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useRef } from "react";
@@ -42,13 +43,13 @@ export default function ImageBar() {
           <CarouselItem key={index} className="pl-0 md:basis-1/2 lg:basis-1/3">
             <div className="p-1">
               <Card>
-                <CardContent
-                  style={{
-                    backgroundImage: `url(${img})`,
-                    backgroundSize: "cover",
-                  }}
-                  className="flex aspect-video items-center justify-center"
-                ></CardContent>
+                <CardContent className="flex aspect-video items-center justify-center p-0">
+                  <img
+                    alt=""
+                    src={img}
+                    className="w-full h-full object-cover"
+                  />
+                </CardContent>
               </Card>
             </div>
           </CarouselItem>
