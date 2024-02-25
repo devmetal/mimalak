@@ -11,29 +11,23 @@ import {
 } from "@/components/ui/carousel";
 import useImagePreload from "@/lib/hooks/useImagePreload";
 import { Skeleton } from "../ui/skeleton";
+import { CarouselImage } from "../CdImage";
 
 const images = [
-  "/2022_webp/IMG_0647.jpg.webp",
-  "/2022_webp/IMG_20230104_115801.jpg.webp",
-  "/2022_webp/IMG_20230325_110152.jpg.webp",
-  "/2022_webp/IMG_20230526_152740.jpg.webp",
-  "/2020_webp/IMG_20210331_094823.jpg.webp",
-  "/2022_webp/alaprajz_javitott.jpg.webp",
-  "/2020_webp/IMG_20210331_094833.jpg.webp",
-  "/2020_webp/IMG_20191011_131645.jpg.webp",
-  "/2020_webp/IMG_20200226_122247.jpg.webp",
-  "/hidegburkolas_webp/IMG_20200706_065013.jpg.webp",
-  "/hidegburkolas_webp/IMG_20200828_080826.jpg.webp",
-  "/2022_webp/IMG_20230526_152740.jpg.webp",
-  "/2022_webp/IMG_20230526_152746.jpg.webp",
-  "/2022_webp/IMG_20230526_152906.jpg.webp",
-  "/2022_webp/IMG_20230526_152949.jpg.webp",
-  "/2022_webp/IMG_20230526_153215.jpg.webp",
-  "/hidegburkolas_webp/IMG_20230203_141127.jpg.webp",
-  "/hidegburkolas_webp/IMG_20230210_112904.jpg.webp",
-  "/2020_webp/IMG_20191204_152724.jpg.webp",
-  "/2020_webp/IMG_20200226_122247.jpg.webp",
-  "/2020_webp/IMG_20200606_175038.jpg.webp",
+  "2024/qn5teg53waqbpcq1gygo",
+  "2024/yteps8v03tktnywm69i4",
+  "2022/zyute793g7snhigofiye",
+  "2022/glulaln8yol3jcwhudrd",
+  "2022/w9f4kfqmeb1fxfnhsmot",
+  "2022/jxfi0zbsbxliw9nllrf6",
+  "2022/yuhlxur4ocrbhuegedoo",
+  "2022/nltoxdijfnvp3l9ev7uy",
+  "2020/kewecfvtoxztht6whmfx",
+  "2020/k0hucyknz5j7wannhys7",
+  "2020/g7kodha03l0jpvyqjmz4",
+  "burkolas/gqtvy3ddhdhdcnyrv2ys",
+  "burkolas/saahhhwcsw9ju6jonxxd",
+  "burkolas/rjnbjhjjhorzewuxrkcw",
 ];
 
 export default function ImageBar() {
@@ -44,9 +38,9 @@ export default function ImageBar() {
     })
   );
 
-  const [loading] = useImagePreload(images);
+  //const [loading] = useImagePreload(images);
 
-  if (loading) {
+  /*if (loading) {
     return (
       <Carousel className="w-full">
         <CarouselContent>
@@ -62,7 +56,7 @@ export default function ImageBar() {
         </CarouselContent>
       </Carousel>
     );
-  }
+  }*/
 
   return (
     <Carousel
@@ -76,11 +70,12 @@ export default function ImageBar() {
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-video items-center justify-center p-0">
-                  <img
+                  {/*<img
                     alt=""
                     src={img}
                     className="w-full h-full object-cover"
-                  />
+        />*/}
+                  <CarouselImage id={img} />
                 </CardContent>
               </Card>
             </div>
