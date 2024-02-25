@@ -15,7 +15,7 @@ export default function GalleryImage({ id }: { id: string }) {
   const image = useMemo(() => {
     return cld
       .image(id)
-      .resize(pad().width(1280))
+      .resize(pad().width(960))
       .delivery(format(webp()))
       .delivery(quality(autoEco()));
   }, [id]);
