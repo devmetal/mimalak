@@ -3,7 +3,7 @@ import { Button } from "../ui/button";
 
 function AppBar() {
   return (
-    <nav className="p-4 shadow-md flex items-baseline mb-2 gap-4">
+    <nav className="p-4 flex items-baseline gap-4">
       <h1 className="flex-1 underline cursor-pointer">
         <Link href="/">MIMA-LAK Kft</Link>
       </h1>
