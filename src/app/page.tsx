@@ -49,26 +49,26 @@ export default async function Home() {
           <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl my-8">
             Referenciák
           </h1>
-          <div className="w-2/3 grid grid-cols-2 gap-8 mt-4">
+          <div className="w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
             <Reference
               images={r2024}
               title="2024"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumendafuga laborum voluptates, iste rerum laudantium."
+              description="Új építésű korszerű, A ++ energihatékony  108 nm-es családi ház +40 nm  terasz-  kb. 570 nm telekrészen nov-dec átadással."
             />
             <Reference
               images={r2022}
               title="2022"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumendafuga laborum voluptates, iste rerum laudantium."
+              description="Új építésű ikerházak  96,5 nm, önálló telekrészeken társasházi alapítóval A++ energia besorolással (ELADVA) "
             />
             <Reference
               images={r2020}
               title="2020"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumendafuga laborum voluptates, iste rerum laudantium."
+              description="Önálló családi ház  108 nm-es  A+ besorolással (Eladva)"
             />
             <Reference
               images={hb}
               title="Hideg Burkolás"
-              description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumendafuga laborum voluptates, iste rerum laudantium."
+              description="Vállalunk - lakások, otthonok, terasz  stb. hidegburkolás munkálatait."
             />
           </div>
         </section>

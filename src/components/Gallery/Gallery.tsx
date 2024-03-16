@@ -19,25 +19,17 @@ export default function Gallery({
   return (
     <Dialog defaultOpen onOpenChange={onOpenChange}>
       <DialogContent>
-        <div className="p-4">
-          <Carousel className="w-full ">
-            <CarouselContent>
-              {images.map((image) => (
-                <CarouselItem key={image}>
-                  <div>
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-0">
-                        <GalleryImage id={image} />
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
-        </div>
+        <Carousel className="my-4">
+          <CarouselContent>
+            {images.map((image) => (
+              <CarouselItem key={image} className="m-0 p-0 flex justify-center">
+                <GalleryImage id={image} />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </DialogContent>
     </Dialog>
   );
