@@ -1,16 +1,12 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useRef } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import AutoPlay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/carousel";
-import useImagePreload from "@/lib/hooks/useImagePreload";
-import { Skeleton } from "../ui/skeleton";
 import { CarouselImage } from "../CdImage";
 
 const images = [
@@ -38,47 +34,19 @@ export default function ImageBar() {
     })
   );
 
-  //const [loading] = useImagePreload(images);
-
-  /*if (loading) {
-    return (
-      <Carousel className="w-full">
-        <CarouselContent>
-          <CarouselItem className="pl-0 md:basis-1/2 lg:basis-1/3">
-            <Skeleton className="w-full h-[250px]" />
-          </CarouselItem>
-          <CarouselItem className="pl-0 md:basis-1/2 lg:basis-1/3">
-            <Skeleton className="w-full h-[250px]" />
-          </CarouselItem>
-          <CarouselItem className="pl-0 md:basis-1/2 lg:basis-1/3">
-            <Skeleton className="w-full h-[250px]" />
-          </CarouselItem>
-        </CarouselContent>
-      </Carousel>
-    );
-  }*/
-
   return (
     <Carousel
-      className="w-full"
+      className="w-full shadow-2xl"
       opts={{ dragFree: true }}
       plugins={[plugin.current]}
     >
-      <CarouselContent>
+      <CarouselContent className="m-0 p-0">
         {images.map((img, index) => (
-          <CarouselItem key={index} className="pl-0 md:basis-1/2 lg:basis-1/3">
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex aspect-video items-center justify-center p-0">
-                  {/*<img
-                    alt=""
-                    src={img}
-                    className="w-full h-full object-cover"
-        />*/}
-                  <CarouselImage id={img} />
-                </CardContent>
-              </Card>
-            </div>
+          <CarouselItem
+            key={index}
+            className="m-0 p-0 md:basis-1/2 lg:basis-1/3"
+          >
+            <CarouselImage id={img} />
           </CarouselItem>
         ))}
       </CarouselContent>
