@@ -37,7 +37,7 @@ export default function Reference({
       ) : null}
       <Card
         onClick={toggle}
-        className="transition-all ease-in-out delay-200 shadow-lg hover:-translate-y-2 cursor-pointer"
+        className="transition-all ease-linear delay-150 shadow-lg hover:shadow-md hover:-translate-y-2 cursor-pointer hover:scale-95"
       >
         <CardHeader>
           <CardTitle>{title}</CardTitle>
