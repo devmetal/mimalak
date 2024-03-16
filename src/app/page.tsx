@@ -1,3 +1,5 @@
+"use server";
+
 import AppBar from "@/components/AppBar";
 import ImageBar from "@/components/ImageBar";
 import Reference from "@/components/Reference";
@@ -37,7 +39,7 @@ const r2020 = [
   "2020/mffdsxxl2kyicygobxyf",
 ];
 
-export default function Home() {
+export default async function Home() {
   return (
     <>
       <AppBar />
