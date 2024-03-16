@@ -47,7 +47,10 @@ export const contactFormDefState: {
 export default function ContactForm() {
   const router = useRouter();
   const [captcha, setCaptcha] = useState<string | null>(null);
-  const [state, formAction] = useFormState(makeContact, contactFormDefState);
+  const [state, formAction, pending] = useFormState(
+    makeContact,
+    contactFormDefState
+  );
 
   const handleCancel: MouseEventHandler = useCallback((e) => {
     e.preventDefault();
@@ -64,7 +67,7 @@ export default function ContactForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form action={formAction}>
+        <form action={formAction} method="POST">
           <div className="grid w-full items-center gap-4">
             <div className="flex flex-col space-y-1.5">
               <Label htmlFor="name">Név *</Label>
@@ -74,6 +77,7 @@ export default function ContactForm() {
                 name="name"
                 required
                 aria-invalid={!!state.errors?.name}
+                disabled={pending}
               />
               {state.errors?.name && <ErrorMessage>Hibás név</ErrorMessage>}
             </div>
@@ -85,6 +89,7 @@ export default function ContactForm() {
                 name="email"
                 required
                 aria-invalid={!!state.errors?.email}
+                disabled={pending}
               />
               {state.errors?.email && (
                 <ErrorMessage>Helytelen email</ErrorMessage>
@@ -97,6 +102,7 @@ export default function ContactForm() {
                 id="phone"
                 name="phone"
                 aria-invalid={!!state.errors?.phone}
+                disabled={pending}
               />
               {state.errors?.phone && (
                 <ErrorMessage>Hibás telefonszám</ErrorMessage>
@@ -108,6 +114,7 @@ export default function ContactForm() {
                 name="message"
                 id="message"
                 aria-invalid={!!state.errors?.message}
+                disabled={pending}
               />
               {state.errors?.message && (
                 <ErrorMessage>Hibás üzenet</ErrorMessage>
@@ -121,15 +128,11 @@ export default function ContactForm() {
               )}
             </div>
             <div className="flex justify-between">
-              <Button onClick={handleCancel} variant="outline">
-                Mégsem
-              </Button>
               <SubmitButton disabled={!captcha} />
             </div>
           </div>
         </form>
       </CardContent>
-      <CardFooter className="flex justify-between"></CardFooter>
     </Card>
   );
 }
