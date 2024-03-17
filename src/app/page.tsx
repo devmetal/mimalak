@@ -45,7 +45,7 @@ export default async function Home() {
       <AppBar />
       <main>
         <ImageBar />
-        <section className="m-4 flex justify-center items-center flex-col">
+        <section className="flex justify-center items-center flex-col">
           <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl my-8">
             Referenciák
           </h1>

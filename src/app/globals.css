@@ -1,13 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+30 23% 42%
+35 19% 81%
+180 25% 72%
+173 22% 52%
+173 27% 38%
+*/
  
 @layer base {
   :root {
-    --background: 0 0% 100%;
+    --background: 41 51% 88%;
     --foreground: 20 14.3% 4.1%;
-    --card: 0 0% 100%;
-    --card-foreground: 20 14.3% 4.1%;
+    --card: 40 51% 92%;
+    --card-foreground: 30 23% 42%;
     --popover: 0 0% 100%;
     --popover-foreground: 20 14.3% 4.1%;
     --primary: 24.6 95% 53.1%;
@@ -53,7 +61,12 @@
   * {
     @apply border-border;
   }
-  hmtl, body {
+  html, body {
     @apply bg-background text-foreground;
+  }
+  .wave {
+    background-image: url('/wave.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }

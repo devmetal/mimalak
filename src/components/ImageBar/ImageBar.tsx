@@ -44,7 +44,7 @@ export default function ImageBar() {
         {images.map((img, index) => (
           <CarouselItem
             key={index}
-            className="m-0 p-0 basis-1/1 lg:basis-1/2 xl:basis-1/3"
+            className="m-0 p-0 basis-1/1 lg:basis-1/2 xl:basis-1/3 opacity-80"
           >
             <CarouselImage id={img} />
           </CarouselItem>
