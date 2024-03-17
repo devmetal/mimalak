@@ -19,7 +19,7 @@ export default function Gallery({
   return (
     <Dialog defaultOpen onOpenChange={onOpenChange}>
       <DialogContent>
-        <Carousel className="my-4">
+        <Carousel className="my-4 mx-4">
           <CarouselContent>
             {images.map((image) => (
               <CarouselItem key={image} className="m-0 p-0 flex justify-center">

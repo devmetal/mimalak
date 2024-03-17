@@ -45,11 +45,25 @@ export default async function Home() {
       <AppBar />
       <main>
         <ImageBar />
-        <section className="flex justify-center items-center flex-col">
-          <h1 className="scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl my-8">
+        <section className="flex justify-center items-center flex-col relative">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 1440 320"
+            className="absolute top-0"
+            preserveAspectRatio="xMaxYMin slice"
+            height={400}
+            width="100%"
+          >
+            <path
+              fill="rgb(85, 78, 60)"
+              fill-opacity="1"
+              d="M0,96L26.7,101.3C53.3,107,107,117,160,138.7C213.3,160,267,192,320,208C373.3,224,427,224,480,202.7C533.3,181,587,139,640,138.7C693.3,139,747,181,800,197.3C853.3,213,907,203,960,170.7C1013.3,139,1067,85,1120,69.3C1173.3,53,1227,75,1280,106.7C1333.3,139,1387,181,1413,202.7L1440,224L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"
+            ></path>
+          </svg>
+          <h1 className="relative z-10 scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl my-8 text-background">
             Referenciák
           </h1>
-          <div className="w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+          <div className="relative z-10 w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
             <Reference
               images={r2024}
               title="2024"

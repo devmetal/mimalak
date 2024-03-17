@@ -16,7 +16,7 @@ const img = cld
 
 function AppBar() {
   return (
-    <nav className="p-4 flex gap-4 items-center">
+    <nav className="p-4 flex gap-4 items-center border-foreground border-b-2">
       <div className="flex-1 cursor-pointer">
         <Link href="/">
           <img src={img} alt="Mima-Lak" className="h-12" />

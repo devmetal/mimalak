@@ -37,6 +37,7 @@ const LazyImage = ({
     alt={alt}
     width={width}
     height={height}
+    layout="responsive"
   />
 );
 
