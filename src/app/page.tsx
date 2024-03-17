@@ -67,7 +67,7 @@ export default async function Home() {
             />
             <Reference
               images={hb}
-              title="Hideg Burkolás"
+              title="Hidegburkolás"
               description="Vállalunk - lakások, otthonok, terasz  stb. hidegburkolás munkálatait."
             />
           </div>
