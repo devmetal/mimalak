@@ -1,10 +1,15 @@
 "use server";
 
 import AppBar from "@/components/AppBar";
+import Footer from "@/components/Footer";
 import ImageBar from "@/components/ImageBar";
 import Reference from "@/components/Reference";
 
-const r2024 = ["2024/qn5teg53waqbpcq1gygo", "2024/yteps8v03tktnywm69i4"];
+const r2024 = [
+  "2024/qn5teg53waqbpcq1gygo",
+  "2024/yteps8v03tktnywm69i4",
+  "2024/elsohaz-1_hsd9xv",
+];
 
 const hb = [
   "burkolas/hyuq6g5u7bazu6mbo92a",
@@ -87,6 +92,7 @@ export default async function Home() {
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }
