@@ -32,10 +32,10 @@ export default function ContactForm() {
   );
 
   return (
-    <Card className="w-full md:w-1/2">
+    <Card className="w-full md:w-1/2 relative z-10 shadow-lg">
       <CardHeader>
         <CardTitle>Lépjen velünk kapcsolatba</CardTitle>
-        <CardDescription>
+        <CardDescription className="text-sm">
           Adja meg a szükséges adatokat és hamarosan felvesszük önnel a
           kapcsolatot
         </CardDescription>
