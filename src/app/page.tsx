@@ -65,7 +65,7 @@ export default function Home() {
             />
             <Reference
               images={hb}
-              title="Hideg Burkolás"
+              title="Hidegburkolás"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumendafuga laborum voluptates, iste rerum laudantium."
             />
           </div>
