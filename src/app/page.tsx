@@ -51,23 +51,28 @@ export default async function Home() {
             viewBox="0 0 1440 320"
             className="absolute top-0"
             preserveAspectRatio="xMaxYMin slice"
-            height={400}
+            height={320}
             width="100%"
           >
             <path
               fill="rgb(85, 78, 60)"
-              fill-opacity="1"
-              d="M0,96L26.7,101.3C53.3,107,107,117,160,138.7C213.3,160,267,192,320,208C373.3,224,427,224,480,202.7C533.3,181,587,139,640,138.7C693.3,139,747,181,800,197.3C853.3,213,907,203,960,170.7C1013.3,139,1067,85,1120,69.3C1173.3,53,1227,75,1280,106.7C1333.3,139,1387,181,1413,202.7L1440,224L1440,0L1413.3,0C1386.7,0,1333,0,1280,0C1226.7,0,1173,0,1120,0C1066.7,0,1013,0,960,0C906.7,0,853,0,800,0C746.7,0,693,0,640,0C586.7,0,533,0,480,0C426.7,0,373,0,320,0C266.7,0,213,0,160,0C106.7,0,53,0,27,0L0,0Z"
+              fillOpacity="1"
+              d="M0,128L40,149.3C80,171,160,213,240,224C320,235,400,213,480,186.7C560,160,640,128,720,138.7C800,149,880,203,960,218.7C1040,235,1120,213,1200,192C1280,171,1360,149,1400,138.7L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z"
             ></path>
           </svg>
           <h1 className="relative z-10 scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl my-8 text-background">
             Referenciák
           </h1>
-          <div className="relative z-10 w-2/3 grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+          <div className="relative z-10 w-2/3 grid grid-cols-1 lg:grid-cols-2 gap-8 mt-4">
             <Reference
               images={r2024}
               title="2024"
               description="Új építésű korszerű, A ++ energihatékony  108 nm-es családi ház +40 nm  terasz-  kb. 570 nm telekrészen nov-dec átadással."
+            />
+            <Reference
+              images={hb}
+              title="Hidegburkolás"
+              description="Vállalunk - lakások, otthonok, terasz  stb. hidegburkolás munkálatait."
             />
             <Reference
               images={r2022}
@@ -77,12 +82,7 @@ export default async function Home() {
             <Reference
               images={r2020}
               title="2020"
-              description="Önálló családi ház  108 nm-es  A+ besorolással (Eladva)"
-            />
-            <Reference
-              images={hb}
-              title="Hidegburkolás"
-              description="Vállalunk - lakások, otthonok, terasz  stb. hidegburkolás munkálatait."
+              description="Önálló családi ház  108 nm-es  A+ besorolással (ELADVA)"
             />
           </div>
         </section>
