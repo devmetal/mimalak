@@ -10,14 +10,14 @@ export default function CarouselImage({ id }: { id: string }) {
   const image = useMemo(() => {
     return cld
       .image(id)
-      .resize(fill().width(640).aspectRatio(ar16X9()))
+      .resize(fill().width(540).aspectRatio(ar16X9()))
       .delivery(format(webp()))
       .delivery(quality(60));
   }, [id]);
 
   return (
-    <div className="h-60">
-      <LazyImage alt="" src={image.toURL()} width={640} height={360} />
+    <div>
+      <LazyImage alt="" src={image.toURL()} width={540} height={304} />
     </div>
   );
 }

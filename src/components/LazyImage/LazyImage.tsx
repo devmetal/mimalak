@@ -32,11 +32,17 @@ const LazyImage = ({
 }) => (
   <Image
     draggable={false}
-    placeholder={`data:image/svg+xml;base64,${toBase64(shimmer(745, 1040))}`}
+    placeholder={`data:image/svg+xml;base64,${toBase64(
+      shimmer(width, height)
+    )}`}
     src={src}
     alt={alt}
     width={width}
     height={height}
+    style={{
+      width: "100%",
+      height: "auto",
+    }}
   />
 );
 
