@@ -67,7 +67,7 @@ export default async function Home() {
             <Reference
               images={r2024}
               title="2024"
-              description="Új építésű korszerű, A ++ energihatékony  108 nm-es családi ház +40 nm  terasz-  kb. 570 nm telekrészen nov-dec átadással."
+              description="Új építésű korszerű, A ++ energihatékony  108 nm-es családi ház +38 nm  terasz-  kb. 540 nm telekrészen nov-dec átadással."
             />
             <Reference
               images={hb}
